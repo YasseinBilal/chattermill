@@ -30,22 +30,34 @@ It correctly bundles React in production mode and optimizes the build for the be
 ## User Experience (UX)
 
 ### Login Page 
-    #### The app is opening on the login view asking the user to enter username and password
-    #### Form Validation: username and password are mandatory fields. If the user try login without entering them, a visual indicator will appear to the user that he has to enter the missing field.
-    #### When user enters username and password, if they are correct, the recieved token and expire date will be persisted for further requests and the user will be redirected to feeds page
-    #### If username or password is incorrect a message will display that username or password is incorrect.
-    #### I created a request interceptor to check the validity of the token and if the token is not valid, user will be redirected to login view to login again and get new valid token. 
+   
+   - The app is opening on the login view asking the user to enter username and password.
+   
+   - Form Validation: username and password are mandatory fields. If the user try login without entering them, a visual indicator will appear to the user that he has to enter the missing field.
+   
+   - When user enters username and password, if they are correct, the recieved token and expire date will be persisted for further requests and the user will be redirected to feeds page.
+   
+   - If username or password is incorrect a message will display that username or password is incorrect.
+   
+   - I created a request interceptor to check the validity of the token and if the token is not valid, user will be redirected to login view to login again and get new valid token. 
 
 ### Feeds Page
-    #### In the initial load it will fetch the first 20 reviews and display it. 
-    #### Infinite scrolling is implemented so when user scroll to the end of the page and new request for reviews will be created to fetch the next bunch of reviews.
-    #### User can filter reviews by theme and this will create api request for reviews passing the theme id. 
-    #### Infinite scrolling working also with filtered reviews correctly.
-    #### Themes and sentiments are visualised using different colors and emojis.
-    #### Each review is represented by its themes, customer comment and creation date. 
+
+   - In the initial load it will fetch the first 20 reviews and display it.   
+   
+   - Infinite scrolling is implemented so when user scroll to the end of the page and new request for reviews will be created to fetch the next bunch of reviews.
+   
+   - User can filter reviews by theme and this will create api request for reviews passing the theme id. 
+   
+   - Infinite scrolling working also with filtered reviews correctly.
+   
+   - Themes and sentiments are visualised using different colors and emojis.
+   
+   - Each review is represented by its themes, customer comment and creation date. 
 
 ### General Notes
-    #### The ids of some review themes don’t map correctly to one of the themes of the list of themes come from themes service and I handled this case by not showing the theme and the sentiment for this theme and that’s why you could see some of the reviews without any themes
+
+   - The ids of some review themes don’t map correctly to one of the themes of the list of themes come from themes service and I handled this case by not showing the theme and the sentiment for this theme and that’s why you could see some of the reviews without any themes.
 
 
 ## Code Style and quality
