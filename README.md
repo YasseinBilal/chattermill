@@ -58,6 +58,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 ### General Notes
 
    - The ids of some review themes don’t map correctly to one of the themes of the list of themes come from themes service and I handled this case by not showing the theme and the sentiment for this theme and that’s why you could see some of the reviews without any themes.
+   
+   - The way I persist the JWT token is by storing it in local storage which is not the best solution security wise. The best way to persist JWT tokens is by using refresh_token way. which means you store the JWT token in memory and refresh token should be set as a cookie from server. and there should be a count down for making a silent refresh token call to get a new JWT token andd expire date. I didn't implement this solution as there is no refresh_token api implemented in Chattermill APIs for the task.
+   
+   
 
 
 ## Code Style and quality
